@@ -1110,7 +1110,7 @@ def home():
 
                 #Currently we still only use PROLIFIC_PID as the username, however, in the longer term, we might switch to
                 # a combination of PROLIFIC_PID and SESSION id
-                url_arguments = ['PROLIFIC_PID']
+                url_arguments = ['PROLIFIC_PID','SESSION_ID']
                 username = '&'.join([request.args.get(it) for it in url_arguments])
                 print("prolific logging in with %s=%s" % ('&'.join(url_arguments),username))
 

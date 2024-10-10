@@ -172,7 +172,7 @@ class ProlificStudy(ProlificBase):
         for v in submission_data:
             self.sessions[v['id']] = v
             #self.user2session[v['participant_id']] = v['id']
-            self.user_status_dict[v['status']].add(v['participant_id'])
+            self.user_status_dict[v['status']].add(f"{v['participant_id']}&{v['id']}")
 
     # return a full list of usernames who have returned/timed-out the task or who have been rejected
     def get_dropped_users(self):
